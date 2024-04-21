@@ -21,7 +21,7 @@ const Navbar = () => {
   // Upto here
 
   return (
-    <nav className="navbar md:px-16">
+    <nav className="navbar md:px-24">
       <Layout>
         <Layout.Header className="nav-header">
           <div
@@ -29,9 +29,7 @@ const Navbar = () => {
             style={{ display: "flex", alignItems: "center", gap: 10 }}
           >
             <img src={logoTech} alt="logo" style={{ width: 40, height: 40 }} />
-            <h3 className="brand-font" style={{ margin: 0 }}>
-              LogoIpsum
-            </h3>
+            <h3 className="brand-font font-bold">LogoIpsum</h3>
           </div>
           <div className="navbar-menu">
             <div className="leftMenu">
