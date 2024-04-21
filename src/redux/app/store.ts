@@ -3,14 +3,17 @@ import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
 import logger from "redux-logger";
 import { authReducer } from "../features/authSlice";
+import { userManagementReducer } from "../features/userManagementSlice";
 
 const persistConfig = {
   key: "root",
   storage,
+  // blacklist: ["userManagement"],
 };
 
 const rootReducer = combineReducers({
   auth: authReducer,
+  userManagement: userManagementReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

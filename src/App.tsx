@@ -9,17 +9,32 @@ import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import AdminLayout from "./components/Layout/AdminLayout";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
     <Routes>
-      <Route element={<ProtectedRoute />}>
+      <Route
+        element={
+          <ProtectedRoute>
+            <AdminLayout />
+          </ProtectedRoute>
+        }
+      >
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/user-management" element={<UserManagement />} />
         <Route path="*" element={<NotFound />} />
       </Route>
 
-      <Route path="/" element={<PublicRoutes />}>
+      <Route
+        path="/"
+        element={
+          <PublicRoutes>
+            <Layout />
+          </PublicRoutes>
+        }
+      >
         <Route path="/" element={<HomePage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
