@@ -19,7 +19,7 @@ const AdminLayout = () => {
   // console.log(location.pathname);
   const screenWidth = window.innerWidth;
   const [collapsed, setCollapsed] = React.useState(
-    screenWidth < 768 ? true : false
+    screenWidth < 768 ? true : false,
   );
   const {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -50,6 +50,10 @@ const AdminLayout = () => {
     },
   ];
 
+  React.useEffect(() => {
+    setCollapsed(screenWidth < 768 ? true : false);
+  }, [location, screenWidth]);
+
   return (
     <React.Fragment>
       <Layout style={{ minHeight: "100vh" }}>
@@ -66,6 +70,7 @@ const AdminLayout = () => {
               alignItems: "center",
               padding: "16px 16px",
               gap: "8px",
+              color: "#fff",
             }}
           >
             <img

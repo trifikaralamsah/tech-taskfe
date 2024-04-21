@@ -21,7 +21,7 @@ const Navbar = () => {
   // Upto here
 
   return (
-    <nav className="navbar">
+    <nav className="navbar md:px-16">
       <Layout>
         <Layout.Header className="nav-header">
           <div

@@ -9,7 +9,7 @@ const Dashboard = () => {
     { year: "1993", value: 3.5 },
     { year: "1994", value: 5 },
     { year: "1995", value: 4.9 },
-    { year: "1996", value: 6 },
+    // { year: "1996", value: 6 },
     // { year: "1997", value: 7 },
     // { year: "1998", value: 9 },
     // { year: "1999", value: 13 },
@@ -25,6 +25,7 @@ const Dashboard = () => {
     // padding: "10px",
     backgroundColor: "#fff",
     width: "100%",
+    height: "320px",
   };
 
   const pieConfig = {
@@ -38,10 +39,10 @@ const Dashboard = () => {
 
   return (
     <React.Fragment>
-      <div style={{ display: "flex", flexDirection: "column", gap: "64px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col xs={24} sm={12} style={style}>
-            <p>Jumlah Penduduk</p>
+            <p className="bg-sky-700">Jumlah Penduduk</p>
             <Line {...props} />
           </Col>
           <Col sm={1} />

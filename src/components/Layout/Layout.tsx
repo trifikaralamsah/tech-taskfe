@@ -1,12 +1,13 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Layout = () => {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <React.Fragment>
-      <Navbar />
-      <h1>Layout</h1>
+      {location.pathname !== "/login" && <Navbar />}
       <Outlet />
     </React.Fragment>
   );
