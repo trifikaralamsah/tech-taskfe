@@ -22,7 +22,7 @@ const UserManagement = () => {
   const [searchParam] = React.useState(["firstName"]);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { users, isUsersLoading } = useAppSelector(
-    (state) => state.userManagement
+    (state) => state.userManagement,
   );
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [isModalEdit, setIsModalEdit] = React.useState(false);
@@ -109,7 +109,10 @@ const UserManagement = () => {
                     content: `Do you want to delete this user ${record.name} ?`,
                     onOk() {
                       dispatch(
-                        deleteUser({ id: record.key, newUser: record?.newUser })
+                        deleteUser({
+                          id: record.key,
+                          newUser: record?.newUser,
+                        }),
                       ).then((res: any) => {
                         if (res.payload?.data?.success) {
                           Modal.success({
@@ -176,8 +179,8 @@ const UserManagement = () => {
           justifyContent: "space-between",
         }}
       >
-        <h2>User Management</h2>
-        <p>LogoIpsum /UserManagement</p>
+        <h2 className="text-2xl font-semibold">User Management</h2>
+        <p className="mb-4">LogoIpsum /UserManagement</p>
       </Row>
       <Row
         style={{

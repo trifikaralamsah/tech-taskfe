@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import AdminLayout from "./components/Layout/AdminLayout";
 import Layout from "./components/Layout/Layout";
+import Profile from "./pages/Admin/Profile";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       >
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/user-management" element={<UserManagement />} />
+        <Route path="/profile" element={<Profile />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Route>
 

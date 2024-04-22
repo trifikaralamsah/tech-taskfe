@@ -3,7 +3,7 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
+  DatabaseOutlined,
   UserOutlined,
   LogoutOutlined,
   MoonOutlined,
@@ -47,7 +47,7 @@ const AdminLayout = () => {
     },
     {
       key: "/user-management",
-      icon: <UserOutlined />,
+      icon: <DatabaseOutlined />,
       label: "User Management",
       onClick: () => {
         navigate("/user-management");
@@ -55,8 +55,11 @@ const AdminLayout = () => {
     },
     {
       key: "3",
-      icon: <UploadOutlined />,
-      label: "nav 3",
+      icon: <UserOutlined />,
+      label: "Profile",
+      onClick: () => {
+        navigate("/profile");
+      },
     },
   ];
 
@@ -150,7 +153,7 @@ const AdminLayout = () => {
                   <Menu
                     style={{
                       width: "150px",
-                      margin: "8px 24px 8px -10px",
+                      margin: "8px 0px 8px -10px",
                     }}
                     mode="horizontal"
                     items={[
@@ -164,14 +167,14 @@ const AdminLayout = () => {
                               className="w-10 rounded-full"
                               alt="avatar"
                             />
-                            <span className="ml-2">{user?.username}</span>
+                            <span className="ml-2">{user?.firstName}</span>
                           </div>
                         ),
                         children: [
                           {
                             label: (
                               <a
-                                onClick={() => {}}
+                                onClick={() => navigate("/profile")}
                                 style={{ fontSize: "15px" }}
                               >
                                 <UserOutlined /> Profile

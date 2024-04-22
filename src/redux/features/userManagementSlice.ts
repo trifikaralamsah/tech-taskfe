@@ -2,6 +2,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { requestApi } from "../../utils";
 import { TAsyncThunkPayload } from "../../types";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
 
 export const getUsers = createAsyncThunk("getUsers", async (_, thunkAPI) => {
   try {
@@ -21,7 +25,7 @@ export const getUsers = createAsyncThunk("getUsers", async (_, thunkAPI) => {
     // return response;
   } catch (error: any) {
     return thunkAPI.rejectWithValue(
-      error?.response?.data?.message || error.message
+      error?.response?.data?.message || error.message,
     );
   }
 });
@@ -38,10 +42,10 @@ export const addUser = createAsyncThunk(
       return response;
     } catch (error: any) {
       return thunkAPI.rejectWithValue(
-        error?.response?.data?.message || error.message
+        error?.response?.data?.message || error.message,
       );
     }
-  }
+  },
 );
 
 export const updateUser = createAsyncThunk(
@@ -50,6 +54,15 @@ export const updateUser = createAsyncThunk(
     // console.log(payload);
     try {
       if (payload.newUser) {
+        MySwal.fire({
+          title: "Success!",
+          // text: "Akun anda telah terdaftar",
+          icon: "success",
+          confirmButtonText: "OK",
+          allowOutsideClick: false,
+          timer: 4000,
+          timerProgressBar: true,
+        });
         return { data: payload };
       } else {
         const response = await requestApi({
@@ -61,10 +74,10 @@ export const updateUser = createAsyncThunk(
       }
     } catch (error: any) {
       return thunkAPI.rejectWithValue(
-        error?.response?.data?.message || error.message
+        error?.response?.data?.message || error.message,
       );
     }
-  }
+  },
 );
 
 export const deleteUser = createAsyncThunk(
@@ -83,10 +96,10 @@ export const deleteUser = createAsyncThunk(
       }
     } catch (error: any) {
       return thunkAPI.rejectWithValue(
-        error?.response?.data?.message || error.message
+        error?.response?.data?.message || error.message,
       );
     }
-  }
+  },
 );
 
 const initialState = {
@@ -214,7 +227,7 @@ const userManagementSlice = createSlice({
         state.isDeleteUserLoading = false;
         state.deleteUserSuccess = action.payload?.data?.message;
         state.users = state.users.filter(
-          (user: any) => user.id !== action.payload?.data?.id
+          (user: any) => user.id !== action.payload?.data?.id,
         );
       });
   },

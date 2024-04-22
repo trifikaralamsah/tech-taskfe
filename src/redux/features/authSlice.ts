@@ -9,7 +9,7 @@ export const registerAdmin = createAsyncThunk(
     try {
       const response = await requestApi({
         method: "post",
-        endpoint: `/register-admin`,
+        endpoint: `register-admin`,
         body: payload,
       });
       return response;
@@ -27,10 +27,9 @@ export const loginAdmin = createAsyncThunk(
     try {
       const response = await requestApi({
         method: "post",
-        endpoint: `/auth/login`,
+        endpoint: `auth/login`,
         body: payload,
       });
-      console.log(response);
       return response;
     } catch (error: any) {
       return thunkAPI.rejectWithValue(
