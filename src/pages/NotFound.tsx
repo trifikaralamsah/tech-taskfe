@@ -7,12 +7,12 @@ const NotFound = () => {
       <div className="grid h-96 w-full grid-cols-2 md:px-24">
         <div className="flex items-center justify-center">
           <div className="flex flex-col gap-3">
-            <h3 className="text-xl font-semibold">
+            <h3 className="text-2xl font-semibold">
               Ooops!
               <br />
               Page Not Found
             </h3>
-            <p className="text-md text-slate-600">
+            <p className="text-xl text-slate-600">
               This page doesn`t exist or was removed <br />
               We suggest you back to home
             </p>

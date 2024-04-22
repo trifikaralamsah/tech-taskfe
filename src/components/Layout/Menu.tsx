@@ -1,19 +1,64 @@
 import { Button, Menu } from "antd";
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const NavMenu = ({ mode }: any) => {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <Menu mode={mode} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-      <Menu.Item key="explore">
-        <span className="font-semibold">Home</span>
+    <Menu mode={mode} style={{ display: "flex", alignItems: "center", gap: 4 }}>
+      <Menu.Item key="explore" onClick={() => navigate("/")}>
+        <div className="px-1" onClick={() => navigate("/")}>
+          <span
+            className={`${pathname === "/about-us" && "text-[#fff]"} ${pathname === "/" && "font-bold text-black"}`}
+          >
+            Home
+          </span>
+        </div>
       </Menu.Item>
-      <Menu.Item key="product">Product</Menu.Item>
-      <Menu.Item key="blog">Blog</Menu.Item>
-      <Menu.Item key="pricing">Pricing</Menu.Item>
-      <Menu.Item key="about">About Us</Menu.Item>
-      <Menu.Item key="contact">Contact Us</Menu.Item>
+      <Menu.Item key="product">
+        <span className={`${pathname === "/about-us" && "text-[#fff]"}`}>
+          Product
+        </span>
+      </Menu.Item>
+      <Menu.Item key="blog">
+        <span className={`${pathname === "/about-us" && "text-[#fff]"}`}>
+          Blog
+        </span>
+      </Menu.Item>
+      <Menu.Item key="pricing">
+        <span className={`${pathname === "/about-us" && "text-[#fff]"}`}>
+          Pricing
+        </span>
+      </Menu.Item>
+      <Menu.Item key="about">
+        <div className="px-1" onClick={() => navigate("/about-us")}>
+          <span
+            className={`${pathname === "/about-us" && "font-bold text-[#fff]"}`}
+          >
+            About Us
+          </span>
+        </div>
+      </Menu.Item>
+      <Menu.Item key="contact">
+        <span className={`${pathname === "/about-us" && "text-[#fff]"}`}>
+          Contact Us
+        </span>
+      </Menu.Item>
       <Menu.Item key="signIn">
-        <span className="font-semibold md:ml-6">Sign In</span>
+        <div className="px-1" onClick={() => navigate("/login")}>
+          <span className="font-semibold md:ml-8">
+            <span className={`${pathname === "/about-us" && "text-[#fff]"}`}>
+              Sign In
+            </span>
+          </span>
+        </div>
       </Menu.Item>
       <Menu.Item key="signup">
         <Button

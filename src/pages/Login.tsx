@@ -5,7 +5,7 @@ import { imgLogin1, logoTech } from "../assets";
 const Login = () => {
   return (
     <React.Fragment>
-      <div className="grid w-screen grid-cols-[30%_70%] place-items-center">
+      <div className="grid w-screen grid-cols-[35%_65%] place-items-center">
         <div className="h-screen w-full bg-[#F5F6FA]">
           <div className="flex flex-col gap-8 p-12">
             <div className="flex items-center gap-3">
@@ -27,9 +27,9 @@ const Login = () => {
             ©2024 All Rights Reserved. PT Indonesia Indicator
           </p>
         </div>
-        <div className="w-[400px] space-y-4 p-6 sm:p-8 md:space-y-5">
-          <h1 className="text-xl font-bold">Welcome to Logo ipsum</h1>
-          <p className="text-sm font-light text-gray-600">
+        <div className="w-[500px] space-y-4 p-6 sm:p-8 md:space-y-5">
+          <h1 className="text-2xl font-bold">Welcome to Logo ipsum</h1>
+          <p className="text-sm font-light text-gray-800">
             Don't have an account?{" "}
             <a
               href="/register"
@@ -39,33 +39,29 @@ const Login = () => {
             </a>
           </p>
           <Form
-            className="space-y-4 md:space-y-4"
+            className="space-y-4 md:space-y-6"
             name="basic"
             layout="vertical"
             autoComplete="off"
           >
             <Form.Item
-              // label="Email"
-              name="email"
+              // label="Username"
+              name="username"
               rules={[
                 {
-                  type: "email",
-                  message: "Please input valid email!",
-                },
-                {
                   required: true,
-                  message: "Please input your email!",
+                  message: "Please input your username!",
                 },
               ]}
             >
-              <label htmlFor="email">
-                Email <span className="text-lg text-blue-500">*</span>
+              <label htmlFor="username" className="text-lg font-semibold">
+                Username <span className="text-lg text-blue-500">*</span>
               </label>
               <Input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Username"
                 style={{ marginTop: "8px" }}
               />
             </Form.Item>
@@ -77,7 +73,7 @@ const Login = () => {
                 { required: true, message: "Please input your password!" },
               ]}
             >
-              <label htmlFor="password">
+              <label htmlFor="password" className="text-lg font-semibold">
                 Password <span className="text-lg text-blue-500">*</span>
               </label>
               <Input
@@ -89,7 +85,12 @@ const Login = () => {
               />
             </Form.Item>
             <Form.Item>
-              <Button type="primary" htmlType="submit" className="w-full">
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="w-full"
+                style={{ height: "40px" }}
+              >
                 Log In
               </Button>
             </Form.Item>

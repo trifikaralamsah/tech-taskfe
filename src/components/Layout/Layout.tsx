@@ -7,7 +7,9 @@ const Layout = () => {
   console.log(location.pathname);
   return (
     <React.Fragment>
-      {location.pathname !== "/login" && <Navbar />}
+      {location.pathname !== "/login" && location.pathname !== "/register" && (
+        <Navbar />
+      )}
       <Outlet />
     </React.Fragment>
   );

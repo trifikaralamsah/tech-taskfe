@@ -1,0 +1,17 @@
+:where(.css-dev-only-do-not-override-1qfezbu).ant-layout {
+  background: transparent !important;
+}
+
+.navbar {
+  border-bottom: none;
+  background: transparent;
+  position: absolute;
+}
+
+.nav-header {
+  background: transparent;
+}
+
+:where(.css-dev-only-do-not-override-1qfezbu).ant-menu-light {
+  background: transparent;
+}
