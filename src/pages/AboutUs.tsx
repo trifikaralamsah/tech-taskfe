@@ -27,7 +27,7 @@ const AboutUs = () => {
           className="absolute left-1/2 top-1/2 w-1/3 -translate-x-1/2 -translate-y-1/2 transform"
         />
         <div className="flex h-full items-center justify-center">
-          <div className="flex w-3/6 flex-col items-center justify-center gap-2 text-center">
+          <div className="flex flex-col items-center justify-center gap-2 px-6 text-center md:w-3/6">
             <h1 className="text-4xl font-semibold text-white">About Us</h1>
             <p className="text-lg text-white">
               A small company offering data-driven solutions for campaign
@@ -36,14 +36,14 @@ const AboutUs = () => {
               and political science.
             </p>
             <button className="border-1 relative mt-6 rounded-full border-2 bg-white py-3 text-blue-500 hover:cursor-pointer hover:bg-slate-200">
-              <span className="px-16 font-bold ">Contact Me</span>
+              <span className="px-8 font-bold md:px-16 ">Contact Me</span>
             </button>
           </div>
         </div>
       </div>
 
       <div className="mt-14 bg-white md:px-24">
-        <div className="mx-auto w-1/2">
+        <div className="mx-auto px-6 md:w-1/2">
           <div className="flex flex-col items-center justify-center gap-4 text-center">
             <img src={kutip2} alt="kutip2" />
             <p className="text-lg text-slate-600">
@@ -60,7 +60,7 @@ const AboutUs = () => {
           </h3>
         </div>
 
-        <div className="mt-14 grid grid-cols-3 gap-4">
+        <div className="mt-14 grid gap-4 md:grid-cols-3">
           <div className="flex flex-col items-center justify-center gap-3">
             <img src={aboutUs1} alt="About us 1" />
             <h3 className="text-lg font-semibold">Xavier Oswald</h3>
@@ -79,18 +79,18 @@ const AboutUs = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex flex-col items-center justify-center gap-4 px-4">
             <h3 className="text-3xl font-semibold text-slate-600">
               What Political Figure Say
             </h3>
-            <p className="w-1/2 text-lg text-slate-600">
+            <p className="text-lg text-slate-600 md:w-1/2">
               These are the stories of political figure who have joined us with
               great pleasure when using this crazy feature.
             </p>
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-3 gap-8">
+        <div className="mt-14 grid gap-8 md:grid-cols-3">
           <div className="rounded-lg border border-slate-400 px-8 py-8">
             <div className="flex items-center gap-3">
               <img src={aboutUs2} alt="about 2" />
@@ -143,7 +143,7 @@ const AboutUs = () => {
         </div>
 
         <div className="mt-24">
-          <div className="grid grid-cols-2 gap-12 rounded-lg bg-[#2161D5] py-14">
+          <div className="grid gap-12 rounded-lg bg-[#2161D5] py-14 md:grid-cols-2">
             <div className="px-20">
               <h3 className="text-4xl font-semibold text-white">
                 Subscribe Now for Get Special Features!

@@ -4,8 +4,8 @@ import { footer2, footer3, footer4, footer5 } from "../../assets";
 const Footer = () => {
   return (
     <React.Fragment>
-      <div className="mt-20 bg-[#F8F8F8]">
-        <div className="grid grid-cols-[47%_17%_20%_20%] px-24 py-10">
+      <div className="mt-20 hidden bg-[#F8F8F8] md:block">
+        <div className="grid px-24 py-10 md:grid-cols-[47%_17%_20%_20%]">
           <div className="flex flex-col gap-3">
             <div className="flex">
               <img src={footer5} alt="logo" />
@@ -31,7 +31,7 @@ const Footer = () => {
                 className="h-20 w-20 cursor-pointer shadow-md shadow-slate-200"
               />
             </div>
-            <p className="-mt-4 text-lg">©2024EBDESK</p>
+            <p className="text-lg md:-mt-4">©2024EBDESK</p>
           </div>
           <div className="flex flex-col gap-2 px-12">
             <h3 className="mb-4 text-xl font-semibold">Product</h3>
@@ -84,6 +84,12 @@ const Footer = () => {
               Become Partner
             </a>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-14 block md:hidden">
+        <div className="h-16 bg-[#F8F8F8] text-center">
+          <p className="text-lg md:-mt-4">©2024EBDESK</p>
         </div>
       </div>
     </React.Fragment>

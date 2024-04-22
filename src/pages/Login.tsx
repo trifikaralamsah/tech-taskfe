@@ -22,8 +22,8 @@ const Login = () => {
 
   return (
     <React.Fragment>
-      <div className="grid w-screen grid-cols-[35%_65%] place-items-center">
-        <div className="h-screen w-full bg-[#F5F6FA]">
+      <div className="grid h-screen w-screen place-items-center md:grid-cols-[35%_65%]">
+        <div className="hidden h-screen w-full bg-[#F5F6FA] md:block">
           <div className="flex flex-col gap-8 p-12">
             <div className="flex items-center gap-3">
               <img src={logoTech} alt="logo" className="h-10 w-10" />
@@ -44,7 +44,7 @@ const Login = () => {
             ©2024 All Rights Reserved. PT Indonesia Indicator
           </p>
         </div>
-        <div className="w-[500px] space-y-4 p-6 sm:p-8 md:space-y-5">
+        <div className="space-y-4 p-6 sm:p-8 md:w-[500px] md:space-y-5">
           <h1 className="text-2xl font-bold">Welcome to Logo ipsum</h1>
           <p className="text-sm font-light text-gray-800">
             Don't have an account?{" "}

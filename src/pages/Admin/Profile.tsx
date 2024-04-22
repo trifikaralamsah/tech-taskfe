@@ -10,7 +10,7 @@ const Profile = () => {
           <div>
             <img src={user?.image} className="w-64 rounded-full" alt="avatar" />
           </div>
-          <div className="flex flex-col rounded-3xl bg-slate-200 px-8 py-8">
+          <div className="flex flex-col rounded-3xl bg-slate-200 px-2 py-8 md:px-8">
             <h3 className="mb-2 text-3xl font-semibold">My Profile</h3>
             <div className="text-md flex gap-4 font-semibold">
               <div className="flex flex-col gap-1">

@@ -6,9 +6,9 @@ const NotFound = () => {
   const navigate = useNavigate();
   return (
     <React.Fragment>
-      <div className="grid h-96 w-full grid-cols-2 md:px-24">
+      <div className="grid w-full md:h-96 md:grid-cols-2 md:px-24">
         <div className="flex items-center justify-center">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 px-4">
             <h3 className="text-2xl font-semibold">
               Ooops!
               <br />

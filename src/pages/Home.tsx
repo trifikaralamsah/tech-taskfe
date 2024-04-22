@@ -39,7 +39,9 @@ const HomePage = () => {
 
           <div className=" grid h-56 w-full">
             <div className="flex flex-col items-center justify-center gap-4 px-4">
-              <h1 className="text-[60px] font-semibold">Why choose us?</h1>
+              <h1 className="invisible text-[60px] font-semibold md:visible">
+                Why choose us?
+              </h1>
               <p className="text-md w-1/2 text-center text-slate-600">
                 We provide to you the best choiches for you. The leading
                 political campaign intelligence platform
@@ -48,7 +50,7 @@ const HomePage = () => {
           </div>
 
           <div className="grid h-80 w-full gap-8 md:grid-cols-3">
-            <div className="flex h-[max-content] flex-col items-start justify-center gap-4 rounded-xl border border-slate-600 px-8 py-14 hover:border-2 hover:border-blue-500">
+            <div className="flex h-[max-content] flex-col items-start justify-center gap-4 rounded-xl border px-8 py-14 hover:border-2 hover:border-blue-500 md:border-slate-600">
               <img src={homeIcon1} alt="home" className="w-20" />
               <p className="text-xl font-semibold">Data</p>
               <p className="text-md font-semibold text-slate-600">
@@ -72,7 +74,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="grid h-56 w-full">
+          <div className="invisible grid h-56 w-full md:visible">
             <div className="flex flex-col items-center justify-center">
               <button className="border-1 mt-2 w-1/5 rounded-full border-[#2161D5] py-3 hover:border-2">
                 <span className="font-semibold text-[#2161D5]">Learn More</span>
@@ -82,7 +84,7 @@ const HomePage = () => {
         </div>
 
         <div className="relative mt-14 h-[1400px] bg-[#2161D5]">
-          <div className="grid grid-cols-2">
+          <div className="grid md:grid-cols-2">
             <div>
               <img
                 src={homeGroup1}
@@ -92,10 +94,10 @@ const HomePage = () => {
               <img
                 src={homeImage1}
                 alt="homeImage"
-                className="absolute left-48 top-[-70px] w-72"
+                className="invisible absolute left-48 top-[-70px] w-72 md:visible"
               ></img>
             </div>
-            <div className="flex h-72 w-3/4 flex-col justify-end gap-3 py-2">
+            <div className="ml-6 flex h-72 w-3/4 flex-col justify-end gap-3 py-2 md:ml-0">
               <h3 className="text-[35px] font-semibold text-white">
                 APP Overview 1
               </h3>
@@ -110,7 +112,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="mt-40 grid grid-cols-2">
+          <div className="mt-40 grid md:grid-cols-2">
             <div className="ml-8 flex h-72 w-full  flex-col justify-end gap-3 px-24 py-2">
               <h3 className="text-[35px] font-semibold text-white">
                 APP Overview 2
@@ -133,12 +135,12 @@ const HomePage = () => {
               <img
                 src={homeDraw2}
                 alt="homeImage"
-                className="absolute right-48 w-80"
+                className="invisible absolute right-48 w-80 md:visible"
               ></img>
             </div>
           </div>
 
-          <div className="mt-40 grid grid-cols-2">
+          <div className="mt-40 grid md:grid-cols-2">
             <div className="flex justify-end">
               <img
                 src={homeGroup1}
@@ -148,7 +150,7 @@ const HomePage = () => {
               <img
                 src={homeDraw3}
                 alt="homeImage"
-                className="absolute left-48 w-80"
+                className="invisible absolute left-48 w-80 md:visible"
               ></img>
             </div>
             <div className="flex h-72 w-full  flex-col justify-end gap-3 px-24 py-2">
@@ -184,7 +186,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="mt-14 grid grid-cols-2 gap-8 px-20">
+          <div className="mt-14 grid gap-8 px-20 md:grid-cols-2">
             <div className="flex flex-col items-center justify-center gap-4 border border-slate-300 py-4 text-center">
               <img src={homeDraw4} alt="home" className="w-80" />
               <h3 className="text-xl font-semibold">Geographic Segmentation</h3>
@@ -205,7 +207,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-8 px-20">
+          <div className="mt-10 grid gap-8 px-20 md:grid-cols-2">
             <div className="flex flex-col items-center justify-center gap-4 border border-slate-300 py-4 text-center">
               <img src={homeDraw7} alt="home" className="w-80" />
               <h3 className="text-xl font-semibold">
@@ -236,8 +238,8 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="mt-14 grid grid-cols-2 gap-8 px-20">
-            <div className="flex flex-col justify-center gap-6 border border-slate-400 py-10 pr-10">
+          <div className="mt-14 grid gap-8 px-20 md:grid-cols-2">
+            <div className="flex flex-col justify-center gap-6 border border-slate-400 py-10 md:pr-10">
               <div className="mx-auto">
                 <img src={homeDraw5} alt="home" className="mx-auto  w-48" />
                 <h3 className="text-center text-xl font-semibold">
@@ -267,7 +269,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center gap-6 border border-slate-400 py-10 pr-10">
+            <div className="flex flex-col justify-center gap-6 border border-slate-400 py-10 md:pr-10">
               <div className="mx-auto">
                 <img src={homeDraw5} alt="home" className="mx-auto  w-48" />
                 <h3 className="text-center text-xl font-semibold">
@@ -312,7 +314,7 @@ const HomePage = () => {
               </h3>
             </div>
             <div className="mt-10 flex flex-col gap-6">
-              <div className="grid grid-cols-[80%_20%] gap-6 border border-slate-400 px-14 py-4">
+              <div className="grid gap-6 border border-slate-400 px-4 py-4 md:grid-cols-[80%_20%] md:px-14">
                 <div className="py-10">
                   <h3 className="text-2xl font-semibold text-blue-500">
                     What do you mean by public-facing usage?
@@ -328,7 +330,7 @@ const HomePage = () => {
                   <h3 className="text-4xl font-semibold text-blue-500">-</h3>
                 </div>
               </div>
-              <div className="grid grid-cols-[80%_20%] gap-6 border border-slate-400 px-14 py-4">
+              <div className="grid gap-6 border border-slate-400 px-4 py-4 md:grid-cols-[80%_20%] md:px-14">
                 <div className="py-10">
                   <h3 className="text-2xl font-semibold">
                     Can i buy more storage for my individual plan?
@@ -338,7 +340,7 @@ const HomePage = () => {
                   <h3 className="text-4xl font-semibold">+</h3>
                 </div>
               </div>
-              <div className="grid grid-cols-[80%_20%] gap-6 border border-slate-400 px-14 py-4">
+              <div className="grid gap-6 border border-slate-400 px-4 py-4 md:grid-cols-[80%_20%] md:px-14">
                 <div className="py-10">
                   <h3 className="text-2xl font-semibold">
                     What happens to my data after the trial or if i cancel my
@@ -349,7 +351,7 @@ const HomePage = () => {
                   <h3 className="text-4xl font-semibold">+</h3>
                 </div>
               </div>
-              <div className="grid grid-cols-[80%_20%] gap-6 border border-slate-400 px-14 py-4">
+              <div className="grid gap-6 border border-slate-400 px-4 py-4 md:grid-cols-[80%_20%] md:px-14">
                 <div className="py-10">
                   <h2 className="text-2xl font-semibold">
                     Can i cancel my monthly or annual subscription?
@@ -361,7 +363,7 @@ const HomePage = () => {
               </div>
               <div className="flex justify-center">
                 <button className="border-1 rounded-full border-2 border-blue-500 py-4 shadow-lg shadow-blue-200 hover:border-blue-900 hover:bg-slate-200">
-                  <span className="px-16 font-bold text-blue-500">
+                  <span className="px-4 font-bold text-blue-500 md:px-16">
                     Add Question
                   </span>
                 </button>
@@ -370,7 +372,7 @@ const HomePage = () => {
           </div>
 
           <div className="mt-20">
-            <div className="grid grid-cols-2 gap-12 rounded-lg bg-[#2161D5] py-14">
+            <div className="grid gap-12 rounded-lg bg-[#2161D5] py-14 md:grid-cols-2">
               <div className="px-20">
                 <h3 className="text-4xl font-semibold text-white">
                   Subscribe Now for Get Special Features!
