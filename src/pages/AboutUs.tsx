@@ -1,5 +1,15 @@
 import React from "react";
-import { aboutUs1, aboutUs2, elipseBig, elipseSmall, kutip2 } from "../assets";
+import {
+  aboutUs1,
+  aboutUs2,
+  aboutUs3,
+  aboutUs4,
+  aboutUs5,
+  aboutUs6,
+  elipseBig,
+  elipseSmall,
+  kutip2,
+} from "../assets";
 import "../style/about-us.css";
 
 const AboutUs = () => {
@@ -54,21 +64,21 @@ const AboutUs = () => {
           <div className="flex flex-col items-center justify-center gap-3">
             <img src={aboutUs1} alt="About us 1" />
             <h3 className="text-lg font-semibold">Xavier Oswald</h3>
-            <p className="text-slate-600">co-founder, develope</p>
+            <p className="text-slate-600">CO-FONDER DEVELOPER</p>
           </div>
           <div className="flex flex-col items-center justify-center gap-3">
-            <img src={aboutUs1} alt="About us 1" />
-            <h3 className="text-lg font-semibold">Xavier Oswald</h3>
-            <p className="text-slate-600">co-founder, develope</p>
+            <img src={aboutUs5} alt="About us 1" />
+            <h3 className="text-lg font-semibold">Sara Creighton</h3>
+            <p className="text-slate-600">CO-FONDER DEVELOPER</p>
           </div>
           <div className="flex flex-col items-center justify-center gap-3">
-            <img src={aboutUs1} alt="About us 1" />
-            <h3 className="text-lg font-semibold">Xavier Oswald</h3>
-            <p className="text-slate-600">co-founder, develope</p>
+            <img src={aboutUs6} alt="About us 1" />
+            <h3 className="text-lg font-semibold">Brandon Ogden</h3>
+            <p className="text-slate-600">PROJECT MANAGER</p>
           </div>
         </div>
 
-        <div className="mt-14 text-center">
+        <div className="mt-20 text-center">
           <div className="flex flex-col items-center justify-center gap-4">
             <h3 className="text-3xl font-semibold text-slate-600">
               What Political Figure Say
@@ -82,7 +92,7 @@ const AboutUs = () => {
 
         <div className="mt-14 grid grid-cols-3 gap-8">
           <div className="rounded-lg border border-slate-400 px-8 py-8">
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex items-center gap-3">
               <img src={aboutUs2} alt="about 2" />
               <div className="flex flex-col">
                 <h3>Airlangga Hartanto</h3>
@@ -91,7 +101,7 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
-            <div className="mt-2 text-justify">
+            <div className="mt-3 text-justify">
               <p>
                 Saya minta kepada segenap pengurus DPD, provinsi, kabupten dan
                 kota, untuk kita harus memiliki roadmap 2024. Di tahun melakukan
@@ -100,44 +110,39 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="rounded-lg border border-slate-400 px-8 py-8">
-            <div className="flex items-center justify-center gap-3">
-              <img src={aboutUs2} alt="about 2" />
+            <div className="flex items-center  gap-3">
+              <img src={aboutUs3} alt="about 2" />
               <div className="flex flex-col">
-                <h3>Airlangga Hartanto</h3>
-                <p className="text-sm">
-                  Menteri Koordinator dan Perekonomian RI
-                </p>
+                <h3>Jokowi Dodo</h3>
+                <p className="text-sm">Presiden RI</p>
               </div>
             </div>
-            <div className="mt-2 text-justify">
+            <div className="mt-3 text-justify">
               <p>
-                Saya minta kepada segenap pengurus DPD, provinsi, kabupten dan
-                kota, untuk kita harus memiliki roadmap 2024. Di tahun melakukan
-                penggalangan opini masyarakat
+                Daerah merupakan bagian dari pemerintah yang langsung
+                berinteraksi dengan
               </p>
             </div>
           </div>
           <div className="rounded-lg border border-slate-400 px-8 py-8">
-            <div className="flex items-center justify-center gap-3">
-              <img src={aboutUs2} alt="about 2" />
+            <div className="flex items-center gap-3">
+              <img src={aboutUs4} alt="about 2" />
               <div className="flex flex-col">
-                <h3>Airlangga Hartanto</h3>
-                <p className="text-sm">
-                  Menteri Koordinator dan Perekonomian RI
-                </p>
+                <h3>Puan Maharani</h3>
+                <p className="text-sm">Ketua DPR dan Fraksi PDI Perjuangan</p>
               </div>
             </div>
-            <div className="mt-2 text-justify">
+            <div className="mt-3 text-justify">
               <p>
-                Saya minta kepada segenap pengurus DPD, provinsi, kabupten dan
-                kota, untuk kita harus memiliki roadmap 2024. Di tahun melakukan
-                penggalangan opini masyarakat
+                Daerah merupakan bagian dari pemerintah yang langsung
+                berinteraksi dengan masyarakat ketikaproses demokratisasi
+                berlangsung.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-24">
           <div className="grid grid-cols-2 gap-12 rounded-lg bg-[#2161D5] py-14">
             <div className="px-20">
               <h3 className="text-4xl font-semibold text-white">

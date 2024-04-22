@@ -1,7 +1,9 @@
 import React from "react";
 import { notFound } from "../assets";
+import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <div className="grid h-96 w-full grid-cols-2 md:px-24">
@@ -16,7 +18,10 @@ const NotFound = () => {
               This page doesn`t exist or was removed <br />
               We suggest you back to home
             </p>
-            <button className="w-3/6 rounded-full bg-[#2161D5] py-2">
+            <button
+              className="mt-4 w-3/6 rounded-full bg-[#2161D5] py-2"
+              onClick={() => navigate("/")}
+            >
               <span className="font-semibold text-white">Learn More</span>
             </button>
           </div>

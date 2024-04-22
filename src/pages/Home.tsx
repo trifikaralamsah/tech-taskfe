@@ -390,10 +390,6 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-
-          <div className="mt-14">
-            <p>© 2022 Trafalgar. All rights reserved</p>
-          </div>
         </div>
       </div>
     </React.Fragment>

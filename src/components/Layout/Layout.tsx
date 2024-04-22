@@ -1,16 +1,16 @@
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Layout = () => {
-  const location = useLocation();
-  console.log(location.pathname);
+  const { pathname } = useLocation();
+
   return (
     <React.Fragment>
-      {location.pathname !== "/login" && location.pathname !== "/register" && (
-        <Navbar />
-      )}
+      {pathname !== "/login" && pathname !== "/register" && <Navbar />}
       <Outlet />
+      {pathname !== "/login" && pathname !== "/register" && <Footer />}
     </React.Fragment>
   );
 };
