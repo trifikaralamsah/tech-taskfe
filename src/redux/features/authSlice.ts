@@ -15,10 +15,10 @@ export const registerAdmin = createAsyncThunk(
       return response;
     } catch (error: any) {
       return thunkAPI.rejectWithValue(
-        error?.response?.data?.message || error.message
+        error?.response?.data?.message || error.message,
       );
     }
-  }
+  },
 );
 
 export const loginAdmin = createAsyncThunk(
@@ -27,16 +27,17 @@ export const loginAdmin = createAsyncThunk(
     try {
       const response = await requestApi({
         method: "post",
-        endpoint: `/login-admin`,
+        endpoint: `/auth/login`,
         body: payload,
       });
+      console.log(response);
       return response;
     } catch (error: any) {
       return thunkAPI.rejectWithValue(
-        error?.response?.data?.message || error.message
+        error?.response?.data?.message || error.message,
       );
     }
-  }
+  },
 );
 
 const initialState: TAuthState = {
@@ -99,8 +100,9 @@ const authSlice = createSlice({
       .addCase(loginAdmin.fulfilled, (state, action) => {
         state.isLoginAdminLoading = false;
         state.loginAdminSuccess = action.payload?.data?.message;
-        state.user = action.payload?.data?.data;
-        webStorage.set("user", action.payload?.data?.data);
+        console.log(action.payload);
+        state.user = action.payload?.data;
+        webStorage.set("user", action.payload?.data);
       });
   },
 });

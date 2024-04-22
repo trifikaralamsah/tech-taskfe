@@ -26,7 +26,7 @@ export const api = (contentType: "json" | "formData" | undefined) => {
 
       return newConfig;
     },
-    (error) => Promise.reject(error)
+    (error) => Promise.reject(error),
   );
 
   return instance;

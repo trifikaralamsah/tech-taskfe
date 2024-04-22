@@ -1,8 +1,25 @@
 import { Button, Form, Input } from "antd";
 import React from "react";
 import { imgLogin1, logoTech } from "../assets";
+import { useAppDispatch } from "../redux/hooks";
+import { loginAdmin } from "../redux/features/authSlice";
 
 const Login = () => {
+  const [form] = Form.useForm();
+  const dispatch = useAppDispatch();
+  const onSubmit = () => {
+    form
+      .validateFields()
+      .then((values) => {
+        dispatch(
+          loginAdmin({ username: values.username, password: values.password }),
+        );
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <React.Fragment>
       <div className="grid w-screen grid-cols-[35%_65%] place-items-center">
@@ -19,7 +36,7 @@ const Login = () => {
               <h3 className="text-2xl font-semibold">Services</h3>
               <p>
                 An expert team help you to analyze your polticalt power.An
-                expert team .
+                expert team.
               </p>
             </div>
           </div>
@@ -43,6 +60,8 @@ const Login = () => {
             name="basic"
             layout="vertical"
             autoComplete="off"
+            form={form}
+            onFinish={() => onSubmit()}
           >
             <Form.Item
               // label="Username"
@@ -54,16 +73,17 @@ const Login = () => {
                 },
               ]}
             >
-              <label htmlFor="username" className="text-lg font-semibold">
-                Username <span className="text-lg text-blue-500">*</span>
-              </label>
-              <Input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="Username"
-                style={{ marginTop: "8px" }}
-              />
+              <div>
+                <label htmlFor="username" className="text-lg font-semibold">
+                  Username <span className="text-lg text-blue-500">*</span>
+                </label>
+                <Input
+                  type="text"
+                  id="username"
+                  placeholder="Username"
+                  style={{ marginTop: "8px" }}
+                />
+              </div>
             </Form.Item>
 
             <Form.Item
@@ -73,16 +93,17 @@ const Login = () => {
                 { required: true, message: "Please input your password!" },
               ]}
             >
-              <label htmlFor="password" className="text-lg font-semibold">
-                Password <span className="text-lg text-blue-500">*</span>
-              </label>
-              <Input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Password"
-                style={{ marginTop: "8px" }}
-              />
+              <div>
+                <label htmlFor="password" className="text-lg font-semibold">
+                  Password <span className="text-lg text-blue-500">*</span>
+                </label>
+                <Input
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  style={{ marginTop: "8px" }}
+                />
+              </div>
             </Form.Item>
             <Form.Item>
               <Button

@@ -7,20 +7,30 @@ import {
   UserOutlined,
   LogoutOutlined,
   MoonOutlined,
+  SunOutlined,
   DashboardOutlined,
 } from "@ant-design/icons";
 import { Button, Col, Layout, Menu, Row, theme } from "antd";
 import { logoTech } from "../../assets";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { logout } from "../../redux/features/authSlice";
 const { Header, Sider, Content } = Layout;
 
 const AdminLayout = () => {
+  const { user } = useAppSelector((state) => state.auth);
   const navigate = useNavigate();
   const location = useLocation();
-  // console.log(location.pathname);
+  const dispatch = useAppDispatch();
   const screenWidth = window.innerWidth;
   const [collapsed, setCollapsed] = React.useState(
     screenWidth < 768 ? true : false,
   );
+  const [darkMode, setDarkMode] = React.useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   const {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     token: { colorBgContainer, borderRadiusLG },
@@ -49,6 +59,11 @@ const AdminLayout = () => {
       label: "nav 3",
     },
   ];
+
+  const onHandleLogout = () => {
+    dispatch(logout());
+    navigate("/");
+  };
 
   React.useEffect(() => {
     setCollapsed(screenWidth < 768 ? true : false);
@@ -121,16 +136,37 @@ const AdminLayout = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Button type="text">
-                    <MoonOutlined />
+                  <Button
+                    type="text"
+                    style={{ marginBottom: "22px" }}
+                    onClick={() => toggleDarkMode()}
+                  >
+                    {darkMode ? (
+                      <SunOutlined style={{ fontSize: "20px" }} />
+                    ) : (
+                      <MoonOutlined style={{ fontSize: "20px" }} />
+                    )}
                   </Button>
                   <Menu
+                    style={{
+                      width: "150px",
+                      margin: "8px 24px 8px -10px",
+                    }}
                     mode="horizontal"
                     items={[
                       {
-                        label: "user?.nama_petugas",
+                        // label: user?.username,
                         key: 1,
-                        icon: <UserOutlined />,
+                        icon: (
+                          <div className="flex gap-2">
+                            <img
+                              src={user?.image}
+                              className="w-10 rounded-full"
+                              alt="avatar"
+                            />
+                            <span className="ml-2">{user?.username}</span>
+                          </div>
+                        ),
                         children: [
                           {
                             label: (
@@ -146,7 +182,7 @@ const AdminLayout = () => {
                           {
                             label: (
                               <a
-                                onClick={() => {}}
+                                onClick={() => onHandleLogout()}
                                 style={{ fontSize: "15px", color: "red" }}
                               >
                                 <LogoutOutlined /> Logout

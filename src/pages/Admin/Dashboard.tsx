@@ -42,7 +42,7 @@ const Dashboard = () => {
       <div style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col xs={24} sm={12} style={style}>
-            <p className="bg-sky-700">Jumlah Penduduk</p>
+            <p>Jumlah Penduduk</p>
             <Line {...props} />
           </Col>
           <Col sm={1} />

@@ -35,8 +35,8 @@ const AboutUs = () => {
               audience (voters). Use technology that unites spatial data science
               and political science.
             </p>
-            <button className="border-1 mt-6 rounded-full border-2 bg-white py-3 hover:cursor-pointer hover:border-blue-900">
-              <span className="px-16 font-bold text-blue-500">Contact Me</span>
+            <button className="border-1 relative mt-6 rounded-full border-2 bg-white py-3 text-blue-500 hover:cursor-pointer hover:bg-slate-200">
+              <span className="px-16 font-bold ">Contact Me</span>
             </button>
           </div>
         </div>
@@ -153,7 +153,7 @@ const AboutUs = () => {
               </h4>
             </div>
             <div className="flex items-center justify-center">
-              <button className="border-1 rounded-lg border-2 bg-white py-4 shadow-md shadow-white hover:bg-slate-300">
+              <button className="rounded-lg bg-white py-4 hover:bg-slate-300">
                 <span className="px-16 font-bold text-blue-500">
                   Subcribe Now
                 </span>

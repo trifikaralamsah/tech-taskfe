@@ -15,34 +15,74 @@ const Footer = () => {
               has high security.
             </p>
             <div className="-mx-5 flex justify-start">
-              <img src={footer2} alt="logo" className="w-30 h-20" />
-              <img src={footer3} alt="logo" className="h-20 w-20" />
-              <img src={footer4} alt="logo" className="h-20 w-20" />
+              <img
+                src={footer2}
+                alt="logo"
+                className="h-20 w-20 cursor-pointer shadow-md shadow-slate-200"
+              />
+              <img
+                src={footer3}
+                alt="logo"
+                className="h-20 w-20 cursor-pointer shadow-md shadow-slate-200"
+              />
+              <img
+                src={footer4}
+                alt="logo"
+                className="h-20 w-20 cursor-pointer shadow-md shadow-slate-200"
+              />
             </div>
             <p className="-mt-4 text-lg">©2024EBDESK</p>
           </div>
           <div className="flex flex-col gap-2 px-12">
             <h3 className="mb-4 text-xl font-semibold">Product</h3>
-            <p className="text-md">Download</p>
-            <p className="text-md">Pricing</p>
-            <p className="text-md">Locations</p>
-            <p className="text-md">Server</p>
-            <p className="text-md">Countries</p>
-            <p className="text-md">Blog</p>
+            <a href="#" className="text-md">
+              Download
+            </a>
+            <a href="#" className="text-md">
+              Pricing
+            </a>
+            <a href="#" className="text-md">
+              Locations
+            </a>
+            <a href="#" className="text-md">
+              Server
+            </a>
+            <a href="#" className="text-md">
+              Countries
+            </a>
+            <a href="#" className="text-md">
+              Blog
+            </a>
           </div>
           <div className="flex flex-col gap-2 px-12">
             <h3 className="mb-4 text-xl font-semibold">Engage</h3>
-            <p className="text-md">Geolabs ?</p>
-            <p className="text-md">FAQ</p>
-            <p className="text-md">Tutorials</p>
-            <p className="text-md">About Us</p>
-            <p className="text-md">Privacy Policy</p>
-            <p className="text-md">Terms of Service</p>
+            <a href="#" className="text-md">
+              Geolabs ?
+            </a>
+            <a href="#" className="text-md">
+              FAQ
+            </a>
+            <a href="#" className="text-md">
+              Tutorials
+            </a>
+            <a href="#" className="text-md">
+              About Us
+            </a>
+            <a href="#" className="text-md">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-md">
+              Terms of Service
+            </a>
           </div>
           <div className="flex flex-col gap-2 px-12">
             <h3 className="mb-4 text-xl font-semibold">Earn Money</h3>
-            <p className="text-md">Affiliate</p>
-            <p className="text-md">Become Partner</p>
+            <a href="#" className="text-md">
+              Affiliate
+            </a>
+            <a href="#" className="text-md">
+              Become Partner
+            </a>
           </div>
         </div>
       </div>

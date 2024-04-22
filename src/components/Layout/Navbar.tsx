@@ -26,7 +26,7 @@ const Navbar = () => {
     >
       <Layout>
         <Layout.Header className="nav-header">
-          <div className="w-full px-24">
+          <div className="w-full md:px-24">
             <div
               className="logo"
               style={{ display: "flex", alignItems: "center", gap: 10 }}
@@ -51,7 +51,6 @@ const Navbar = () => {
               </Button>
 
               <Drawer
-                title={"Brand Here"}
                 placement="right"
                 closable={true}
                 onClose={showDrawer}

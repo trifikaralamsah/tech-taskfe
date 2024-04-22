@@ -8,7 +8,7 @@ import { userManagementReducer } from "../features/userManagementSlice";
 const persistConfig = {
   key: "root",
   storage,
-  // blacklist: ["userManagement"],
+  // blacklist: ["auth"],
 };
 
 const rootReducer = combineReducers({

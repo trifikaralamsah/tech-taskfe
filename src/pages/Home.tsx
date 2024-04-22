@@ -178,7 +178,7 @@ const HomePage = () => {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam.
               </p>
-              <button className="border-1 mt-2 w-1/3 rounded-full bg-[#2161D5] py-3 hover:border-2">
+              <button className="border-1 mt-2 w-1/3 rounded-full bg-[#2161D5] py-3 shadow-lg shadow-blue-400  hover:bg-blue-800">
                 <span className="font-semibold text-white">See a Demo</span>
               </button>
             </div>
@@ -261,10 +261,8 @@ const HomePage = () => {
                   <h3 className="text-2xl">
                     <span className="font-bold">$99</span> / mo
                   </h3>{" "}
-                  <button className="border-1 mt-2 rounded-full bg-[#2161D5] py-3 hover:border-2">
-                    <span className="px-20 font-semibold text-white">
-                      Select
-                    </span>
+                  <button className="mt-2 rounded-full border-2 border-[#2161D5] py-3 text-blue-500 shadow-lg shadow-blue-200 hover:bg-slate-200">
+                    <span className="px-20 font-semibold ">Select</span>
                   </button>
                 </div>
               </div>
@@ -297,7 +295,7 @@ const HomePage = () => {
                   <h3 className="text-2xl">
                     <span className="font-bold">$500</span> / mo
                   </h3>{" "}
-                  <button className="border-1 mt-2 rounded-full bg-[#2161D5] py-3 hover:border-2">
+                  <button className="border-1 mt-2 rounded-full bg-[#2161D5] py-3 shadow-lg shadow-blue-200 hover:bg-blue-800">
                     <span className="px-20 font-semibold text-white">
                       Select
                     </span>
@@ -362,7 +360,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <button className="border-1 rounded-full border-2 border-blue-500 py-4 hover:border-blue-900">
+                <button className="border-1 rounded-full border-2 border-blue-500 py-4 shadow-lg shadow-blue-200 hover:border-blue-900 hover:bg-slate-200">
                   <span className="px-16 font-bold text-blue-500">
                     Add Question
                   </span>
@@ -382,7 +380,7 @@ const HomePage = () => {
                 </h4>
               </div>
               <div className="flex items-center justify-center">
-                <button className="border-1 rounded-lg border-2 bg-white py-4 shadow-md shadow-white hover:bg-slate-300">
+                <button className="rounded-lg bg-white py-4 hover:bg-slate-300">
                   <span className="px-16 font-bold text-blue-500">
                     Subcribe Now
                   </span>
