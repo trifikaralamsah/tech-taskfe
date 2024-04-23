@@ -85,6 +85,14 @@ export const deleteUser = createAsyncThunk(
   async (payload: TAsyncThunkPayload, thunkAPI) => {
     try {
       if (payload.newUser) {
+        MySwal.fire({
+          title: "Success!",
+          icon: "success",
+          confirmButtonText: "OK",
+          allowOutsideClick: false,
+          timer: 4000,
+          timerProgressBar: true,
+        });
         return { data: payload };
       } else {
         const response = await requestApi({

@@ -9,6 +9,7 @@ const persistConfig = {
   key: "root",
   storage,
   // blacklist: ["auth"],
+  // blacklist: ["userManagement"],
 };
 
 const rootReducer = combineReducers({

@@ -6,4 +6,5 @@ export interface DataTypeUserManagement {
   email: string;
   gender: string;
   lastUpdate: string;
+  newUser: boolean;
 }

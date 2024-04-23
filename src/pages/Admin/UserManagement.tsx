@@ -114,6 +114,7 @@ const UserManagement = () => {
                           newUser: record?.newUser,
                         }),
                       ).then((res: any) => {
+                        console.log(res);
                         if (res.payload?.data?.success) {
                           Modal.success({
                             title: res.payload?.data?.message,
@@ -139,6 +140,7 @@ const UserManagement = () => {
       email: user.email,
       gender: user.gender,
       lastUpdate: user.lastUpdate,
+      newUser: user.newUser ? true : false,
     };
   });
 
