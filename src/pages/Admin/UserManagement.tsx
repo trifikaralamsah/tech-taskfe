@@ -182,7 +182,7 @@ const UserManagement = () => {
         }}
       >
         <h2 className="text-2xl font-semibold">User Management</h2>
-        <p className="mb-4">LogoIpsum /UserManagement</p>
+        <p className="-z-10 mb-4">/UserManagement</p>
       </Row>
       <Row
         style={{
