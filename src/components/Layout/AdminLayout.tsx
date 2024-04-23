@@ -173,23 +173,27 @@ const AdminLayout = () => {
                         children: [
                           {
                             label: (
-                              <a
-                                onClick={() => navigate("/profile")}
-                                style={{ fontSize: "15px" }}
-                              >
-                                <UserOutlined /> Profile
-                              </a>
+                              <div className="w-full bg-white px-3">
+                                <a
+                                  onClick={() => navigate("/profile")}
+                                  style={{ fontSize: "15px" }}
+                                >
+                                  <UserOutlined /> Profile
+                                </a>
+                              </div>
                             ),
                             key: 11,
                           },
                           {
                             label: (
-                              <a
-                                onClick={() => onHandleLogout()}
-                                style={{ fontSize: "15px", color: "red" }}
-                              >
-                                <LogoutOutlined /> Logout
-                              </a>
+                              <div className="w-full bg-white px-3">
+                                <a
+                                  onClick={() => onHandleLogout()}
+                                  style={{ fontSize: "15px", color: "red" }}
+                                >
+                                  <LogoutOutlined /> Logout
+                                </a>
+                              </div>
                             ),
                             key: 12,
                           },
