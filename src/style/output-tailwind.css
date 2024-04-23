@@ -566,6 +566,10 @@ video {
   visibility: hidden;
 }
 
+.static {
+  position: static;
+}
+
 .fixed {
   position: fixed;
 }
@@ -708,6 +712,10 @@ video {
   height: 2.5rem;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-20 {
   height: 5rem;
 }
@@ -747,10 +755,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-16 {
-  height: 4rem;
 }
 
 .w-1\/2 {
@@ -835,20 +839,8 @@ video {
   cursor: pointer;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-\[35\%_65\%\] {
   grid-template-columns: 35% 65%;
-}
-
-.grid-cols-\[80\%_20\%\] {
-  grid-template-columns: 80% 20%;
 }
 
 .flex-col {
@@ -997,6 +989,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .p-12 {
   padding: 3rem;
 }
@@ -1012,11 +1008,6 @@ video {
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
-}
-
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
 }
 
 .px-16 {
@@ -1331,16 +1322,16 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-\[35\%_65\%\] {
+    grid-template-columns: 35% 65%;
+  }
+
   .md\:grid-cols-\[47\%_17\%_20\%_20\%\] {
     grid-template-columns: 47% 17% 20% 20%;
   }
 
   .md\:grid-cols-\[80\%_20\%\] {
     grid-template-columns: 80% 20%;
-  }
-
-  .md\:grid-cols-\[35\%_65\%\] {
-    grid-template-columns: 35% 65%;
   }
 
   .md\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
@@ -1365,6 +1356,16 @@ video {
     padding-right: 0.25rem;
   }
 
+  .md\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .md\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
@@ -1373,16 +1374,6 @@ video {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .md\:px-14 {
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
   }
 
   .md\:pr-10 {

@@ -15,3 +15,12 @@
 :where(.css-dev-only-do-not-override-1qfezbu).ant-menu-light {
   background: transparent;
 }
+
+:where(.css-1qfezbu).ant-layout {
+  background: transparent !important;
+}
+
+:where(.css-1qfezbu).ant-menu-light,
+:where(.css-1qfezbu).ant-menu-light > .ant-menu {
+  background: transparent !important;
+}

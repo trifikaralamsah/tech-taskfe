@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar ${pathname !== "/about-us" && "sticky bg-white"} w-full`}
+      className={`navbar ${pathname !== "/about-us" ? "sticky bg-white" : "bg-transparent"} w-full`}
     >
       <Layout>
         <Layout.Header className="nav-header">
